@@ -1,34 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ml FLask App</title>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div id="brandname">
-                ML App
-            </div>
-            <h2>Spam Detection For Youtube Comments</h2>
-        </div>
-    </header>
-    
-    <div class="ml-container">
 
-        <form action="{{ url_for('predict')}}" method="POST">
-            <p>Enter Your Comment Here</p>
-            <!-- <input type="text" name="comment"/> -->
-            <textarea name="comment" rows="4" cols="50"></textarea>
-            <br/>
+	<header>
+		<div class="container">
+		<div id="brandname">
+			ML App
+		</div>
+		<h2>Spam Detection For Youtube Comments</h2>
+		
+	</div>
+	</header>
 
-            <input type="submit" class="btn-info" value="predict">
-            
-        </form>
-            
-    </div>
-    
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		<p>Enter Your Comment Here</p>
+		<textarea name="comment" rows="4" cols="50"></textarea>
+		<br/>
+
+		<input type="submit" class="btn-info" value="predict">
+		
+	</form>
+		
+	</div>
+
+	
+	
+
 </body>
 </html>
+
